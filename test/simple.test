@@ -12,7 +12,7 @@ UTest({
 				setTimeout(() => {
 					$dom.has_('h4');
 					done();
-				}, 1100);
+				}, 1400);
 			})
 	},
 	'test inherited component' (done) {
@@ -25,7 +25,7 @@ UTest({
 				setTimeout(() => {
 					$dom.has_('button');
 					done();
-				}, 1100);
+				}, 1400);
 			})
 	},
 })
