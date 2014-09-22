@@ -22,18 +22,20 @@ Sub-nodes of the component won't be rendered until it is required. It will be in
 ```javascript
 mask.registerHandler(':myComponent', Compo('a:lazy', {
 	template: `button x-signal= 'click: message' > 'Greet'`,
+	constructor () {
+		setTimeout(() => this.resolveLazy(), 100);
+	},
 	slots: {
 		message () {
 			alert(this.model.name)
 		}
-	},
-	onRenderEnd () {
-		setTimeout(() => this.resolveLazy(), 100);
 	}
 }));
 
 $(body).appendMask(':myComponent', { name: 'Smith' });
 ```
+
+> `onRenderStart` and `onRenderEnd` are called after the component was resolved
 
 ### Examples
 
