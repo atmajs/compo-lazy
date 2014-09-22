@@ -22,8 +22,14 @@ UTest({
 			.done(document => {
 				
 				var $dom = $(document).hasNot_('button');
+
+				$dom.find('#messages').hasNot_('text', '`onRenderEnd`');
 				setTimeout(() => {
-					$dom.has_('button');
+					$dom
+						.has_('button')
+						.find('#messages')
+						.has_('text', '`onRenderEnd`')
+						;
 					done();
 				}, 1400);
 			})
