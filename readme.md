@@ -3,7 +3,7 @@
 [![Bower version](https://badge.fury.io/bo/compo-lazy.svg)](http://badge.fury.io/bo/compo-lazy)
 
 ```scss
-a:lazy { /*Template*/ }
+Lazy { /*Template*/ }
 ```
 
 Sub-nodes of the component won't be rendered until it is required. It will be instead only one Node Comment added to the DOM, which is the placeholder for the future nodes.
@@ -20,7 +20,7 @@ Sub-nodes of the component won't be rendered until it is required. It will be in
 ### Inheritance
 
 ```javascript
-mask.registerHandler(':myComponent', Compo('a:lazy', {
+mask.define('MyComponent', mask.Compo('Lazy', {
 	template: `button x-signal= 'click: message' > 'Greet'`,
 	constructor () {
 		setTimeout(() => this.resolveLazy(), 100);
@@ -32,7 +32,25 @@ mask.registerHandler(':myComponent', Compo('a:lazy', {
 	}
 }));
 
-$(body).appendMask(':myComponent', { name: 'Smith' });
+$(body).appendMask('MyComponent', { name: 'Smith' });
+```
+
+```mask
+define MyComponent extends Lazy {
+
+	h4 > 'Hello'
+}
+```
+
+### As `Self` Component
+
+```mask
+Lazy #foo {
+	h4 > 'hello'
+}
+```
+```javascript
+app.find('#foo').resolveLazy();
 ```
 
 > `onRenderStart` and `onRenderEnd` are called after the component was resolved
