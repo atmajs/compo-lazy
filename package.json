@@ -1,6 +1,6 @@
 {
     "name": "compo-lazy",
-    "version": "0.8.4",
+    "version": "0.8.6",
     "homepage": "https://github.com/atmajs/compo-lazy",
     "authors": [
         "Alex Kit <alex.kit@atmajs.com>"
@@ -8,11 +8,10 @@
     "description": "MaskJS lazy render component (Atma.js)",
     "main": "lib/lazy.js",
     "license": "MIT",
-   
     "devDependencies": {
         "atma": "^0.10.59",
         "atma-loader-babel": "^1.1.26",
-        "babel-preset-es2015": "^6.18.0"        
+        "babel-preset-es2015": "^6.18.0"
     },
     "scripts": {
         "test": "atma test"
@@ -22,17 +21,17 @@
             "atma-loader-babel"
         ],
         "settings": {
-          "atma-loader-babel": {
-            "extensions": [
-              "es6",
-              "test"
-            ],
-            "babel": {
-              "presets": [
-                "es2015"
-              ]
+            "atma-loader-babel": {
+                "extensions": [
+                    "es6",
+                    "test"
+                ],
+                "babel": {
+                    "presets": [
+                        "es2015"
+                    ]
+                }
             }
-          }
         }
     }
 }
