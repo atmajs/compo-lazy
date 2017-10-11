@@ -2,11 +2,11 @@
 <html>
 <head></head>
 <body>
-	<script src='/bower_components/maskjs/lib/mask.js'></script>
+	<script src='/node_modules/maskjs/lib/mask.js'></script>
 	<script src='/lib/lazy.js'></script>
 	<script type='text/mask' data-run="true">
 		p > 'In a second you see the greeting:'
-		section > a:lazy #test > h4 > 'Hello';
+		section > Lazy #test > h4 > 'Hello';
 	</script>
 	<script type='application/javascript'>
 		var app = mask.run();

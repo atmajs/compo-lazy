@@ -1,4 +1,6 @@
-var LazyCompo = mask.Compo({
+import { mask } from './globals';
+
+export default mask.Compo({
 	meta: {
 		mode: 'server'
 	},

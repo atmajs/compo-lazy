@@ -2,13 +2,13 @@
 <html>
 <head></head>
 <body>
-	<script src='/bower_components/maskjs/lib/mask.js'></script>
+	<script src='/node_modules/maskjs/lib/mask.js'></script>
 	<script src='/lib/lazy.js'></script>
 	In a second should appear the button.
 	<p id="messages"></p>
 	<script type='application/javascript'>
 
-		mask.registerHandler(':myComponent', Compo('a:lazy', {
+		mask.registerHandler(':myComponent', Compo('Lazy', {
 			template: "button x-signal='click: message' > 'Greet'",
 			slots: {
 				message : function() {
